@@ -1,4 +1,4 @@
 *.log
-local_setting.py
+/config/local_setting.py
 db.sqlite3
 db.sqlite3-journal
