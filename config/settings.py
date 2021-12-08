@@ -20,7 +20,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-pnveer=6bwg%xwr%&_9&0bm&4%wg@sr!xdhu&waq5t^y6lu)!&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -124,3 +123,8 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+try:
+    from .local_settings import *
+except ImportError:
+    pass
